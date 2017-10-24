@@ -1,1 +1,9 @@
+To run the container:
+replace source with where data is located
+The data should contain grouplens_data folder and imdb data.
+docker run -v /home/vedant/Desktop/Projects/movies_data:/app/data cass_try2
+
 In bash shell run script.sh
+
+
+
