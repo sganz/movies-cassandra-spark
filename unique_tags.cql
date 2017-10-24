@@ -1,5 +1,7 @@
 CAPTURE 'output.data'
 
+USE movies;
+
 COPY movies.unique_tags FROM  'data/grouplens_data/tags.csv' WITH HEADER=TRUE;
   
 CREATE OR REPLACE FUNCTION uniq(state set<text>, val text)
