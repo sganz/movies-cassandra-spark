@@ -19,4 +19,12 @@ CREATE TABLE movies.ratings (
         PRIMARY KEY (userId, movieId)
        );
 
+CREATE TABLE movies.links (
+        movieId bigint,
+        imbdId bigint,
+        tmbbId bigint,
+        PRIMARY KEY (movieId, imbdId)
+       );
+
 COPY movies.ratings FROM  'data/grouplens_data/ratings.csv' WITH HEADER=TRUE;
+COPY movies.links FROM  'data/grouplens_data/links.csv' WITH HEADER=TRUE;
