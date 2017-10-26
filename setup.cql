@@ -1,8 +1,6 @@
 CREATE KEYSPACE movies WITH REPLICATION = 
 { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
-USE movies;
-
 CREATE TABLE movies.unique_tags (
         userId bigint,
         movieId bigint,
