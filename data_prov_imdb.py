@@ -5,7 +5,7 @@
 # /N count = 2259 -- originalTitle
 # /N count = 1 -- isAdult
 # /N count = 322116 -- startYear
-# startYear MAX = 2017
+# startYear MAX = 2115
 # startYear MIN = 1874
 # /N count = 4504051 -- endYear
 # /N count = 3140191 -- runtimeMinutes
