@@ -1,9 +1,43 @@
-To run the container:
-replace source with where data is located
-The data should contain grouplens_data folder and imdb data.
-docker run -v /home/vedant/Desktop/Projects/movies_data:/app/data cass_try2
+This project is open source and contains scripts and instruction that:
+  1. set up AWS Free Tier account,
+  2. launch and ssh into AWS EC2 instance,
+  3. download files stored in AWS S3 using AWS Java SDK
+  4. perform data ETL and denormalization using Python Pandas
+  5. install Docker and build a Cassandra cluster on AWS EC2
+  6. create keyspaces and tables in Cassandra
+  7. load csv files into Cassandra tables
+  8. use Spark and Jupyter to analyze data in Cassandra
+  
+Data Sources:
+1. IMDB datasets: http://www.imdb.com/interfaces/
+2. GroupLens datasets: https://grouplens.org/datasets/movielens/
 
-In bash shell run script.sh
+Set up AWS Free Tier:
+https://aws.amazon.com/free/
+
+Launch AWS EC2 instance:
+Once your AWS Free Tier account is created, proceed to AWS Dashboard, click 'EC2' under 'Compute' section to proceed to EC2 Dashboard
+1. Click 'Launch instance' button
+2. Select a prefered Amazon Machine Image (AMI), e.g. Amazon Linux AMI, which is free for free tier subscription
+3. Select an instance type. Different types have different CPU, RAM, storage and prices. t2.micro is free for free tier subscription, pleace see pricing for other instance types here: https://aws.amazon.com/ec2/pricing/
+4. Review and launch
+
+ssh into AWS EC2 instance:
+1. Go to EC2 Dashboard
+2. Click 'Key Pairs' under 'Resources' section
+3. Click 'Create Key Pair' and input a name for the new key pair e.g. test
+4. A pem file will be automatically downloaded, which is your key
+5. Click 'Instances' on left menu
+6. Select a running instance (if none is running, click 'Actions' -> 'Instance State' -> Start)
+7. Click 'Actions' -> 'Connect'
+8. Copy the ssh command under 'Examples' section, which should look like:
+    ssh -i "test.pem" ec2-user@ec2-xx-xxx-xxx-x.xxx.compute.amazonaws.com
+9. Open your cmd, type following command (replace test.pem with your the name of your pem file):
+    chmod 400 test.pem
+10. Type the ssh command you copied at step 8 into cmd
+
+
+
 
 
 
