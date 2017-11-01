@@ -34,10 +34,14 @@ Once your AWS Free Tier account is created, proceed to AWS Dashboard, click 'EC2
 6. Select a running instance (if none is running, click 'Actions' -> 'Instance State' -> Start)
 7. Click 'Actions' -> 'Connect'
 8. Copy the ssh command under 'Examples' section, which should look like:
+    ```
     ssh -i "test.pem" ec2-user@ec2-xx-xxx-xxx-x.xxx.compute.amazonaws.com
-9. Open your cmd, type following command (replace test.pem with your the name of your pem file):
+    ```
+9. Open your cmd, run following command (replace test.pem with your the name of your pem file):
+    ```
     chmod 400 test.pem
-10. Type the ssh command you copied at step 8 into cmd
+    ```
+10. Run the ssh command you copied at step 8 into cmd
 
 ### Request imdb datasets on AWS S3:
 IMDB datasets are located in the AWS S3 bucket named “imdb-datasets” and can be accessed by using the REST API or the AWS SDK wrapper libraries. Follow these steps to download files from AWS S3 using AWS Java SDK and Toolkit for Eclipse:
@@ -51,23 +55,25 @@ IMDB datasets are located in the AWS S3 bucket named “imdb-datasets” and can
   Refer grouplens_denorm_clean.py and imdb_denorm_clean.py
 
 ### Install Docker on AWS EC2
-Refer to installDocker.sh
+Refer to [installDocker.sh](installDocker.sh)
+
 For more info: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
 
 ### Build a Cassandra cluter on AWS EC2
-Refer to create_Cassandra_cluster.sh
+Refer to [create_Cassandra_cluster.sh](create_Cassandra_cluster.sh)
+
 For more info: https://hub.docker.com/_/cassandra/
 
 ### Create keyspaces and tables in Cassandra
-Refer to create_keyspace_tables.cql
+Refer to [create_keyspace_tables.cql](create_keyspace_tables.cql)
 
 ### Load csv files into Cassandra tables
-Refer to import_csv.cql
+Refer to [import_csv.cql](import_csv.cql)
 
 ### Use Spark and Jupyter to analyze data in Cassandra
-analyze-data-by-spark.ipynb: demonstrate to how to connect Spark to Cassandra and use Spark SQL to perform data analysis on Cassandra data
-grouplens_unique_tags.cql: a CQL script used to extract unique movie tags from GroupLens dataset
-variance.cql: a CQL UDAF used to calculate variance
+* [analyze-data-by-spark.ipynb](analyze-data-by-spark.ipynb): demonstrate to how to connect Spark to Cassandra and use Spark SQL to perform data analysis on Cassandra data
+* [grouplens_unique_tags.cql](grouplens_unique_tags.cql): a CQL script used to extract unique movie tags from GroupLens dataset
+* [variance.cql](variance.cql): a CQL UDAF used to calculate variance
 
 
 
