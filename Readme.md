@@ -65,7 +65,10 @@ Refer to create_keyspace_tables.cql
 Refer to import_csv.cql
 
 ### Use Spark and Jupyter to analyze data in Cassandra
-Refer to analyze-data-by-spark.ipynb which demonstrate to how to connect Spark to Cassandra and use Spark SQL to perform data analysis on Cassandra data
+analyze-data-by-spark.ipynb: demonstrate to how to connect Spark to Cassandra and use Spark SQL to perform data analysis on Cassandra data
+grouplens_unique_tags.cql: a CQL script used to extract unique movie tags from GroupLens dataset
+variance.cql: a CQL UDAF used to calculate variance
+
 
 
 
