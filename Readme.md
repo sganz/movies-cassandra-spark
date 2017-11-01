@@ -41,18 +41,19 @@ Once your AWS Free Tier account is created, proceed to AWS Dashboard, click 'EC2
     ```
     chmod 400 test.pem
     ```
-10. Run the ssh command you copied at step 8 into cmd
+10. Run the ssh command you copied at step 8
 
 ### Request imdb datasets on AWS S3:
 IMDB datasets are located in the AWS S3 bucket named “imdb-datasets” and can be accessed by using the REST API or the AWS SDK wrapper libraries. Follow these steps to download files from AWS S3 using AWS Java SDK and Toolkit for Eclipse:
 1. Download Eclipse if you don't have it
 2. Install AWS Toolkit for Eclipse by following steps on https://aws.amazon.com/eclipse/
 3. Log in using your AWS Account
-4. Refer GetObject.java to download files from AWS S3
-    Note: you will need to change file names and local path to store files
+4. Refer [GetObject.java](GetObject.java) to download files from AWS S3
+
+*Note: you will need to change file names and local path to store files*
     
 ### Perform data ETL and denormalization using Python Pandas:
-  Refer grouplens_denorm_clean.py and imdb_denorm_clean.py
+  Refer [grouplens_denorm_clean.py](grouplens_denorm_clean.py) and [imdb_denorm_clean.py](imdb_denorm_clean.py)
 
 ### Install Docker on AWS EC2
 Refer to [installDocker.sh](installDocker.sh)
