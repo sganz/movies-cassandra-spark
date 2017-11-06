@@ -1,6 +1,8 @@
 # Cinema Exploration with Apache Cassandra and Spark
 
-## Outline
+![Data Flow](data-flow-graph.png)
+
+### Outline
 This project is open source and contains scripts and instruction that:
   1. set up AWS Free Tier account,
   2. launch and ssh into AWS EC2 instance,
